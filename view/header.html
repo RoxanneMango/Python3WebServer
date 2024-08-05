@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<header>
+		<div id="StaticTopBanner">
+			<ul class="horizontalList horizontalListBanner">
+				<li>
+					<img class="paddedImage" src="assets/menuIcon.png"/>
+				</li>
+				<li>
+					<a href="index.html">
+						<img src="assets/snake_logo.png" class="bannerImage"/>
+					</a>
+				</li>
+				<li>
+					<ul style="width:auto; height:5em; list-style-type:none; margin:0; padding:0;">
+						<li style="height:75%;margin:0;margin-top: 0.5em;padding:0;">
+							<img class="paddedImage" src="assets/userIcon.png"/>
+						</li>
+						<li style="height:25%;margin:0;margin-top:-0.5em;padding:0;">
+							<p id="username" style="font-size:12px; line-height: 0;font-weight:bold;"></p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="HomeCollapsebleFilterBar">
+			<ul class="horizontalListNavbar">
+				<li><a href="about.html">About</a></li>
+				<li><a href="login.html">Login</a></li>
+<!--				<li><a href="eventForm.html">EventForm!</a></li> -->
+					<li><a href="userPanel.html">User panel</a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<script>
+		window.addEventListener("load", getUser());
+	
+		function getUser() {
+			console.log("getUser()");
+
+			let sessionHash;
+			let username = "Guest";
+
+			let cookieJar = document.cookie;
+			if(cookieJar.length > 0) {
+				cookies = cookieJar.split(';');
+				if(cookies.length == 2) {
+					for(let cookie of cookies) {
+						cookie = cookie.split('=');
+						if(cookie.length == 2) {
+							cookie[0] = cookie[0].trim();
+							if(cookie[0] == "py3server_username") {
+								username = cookie[1];
+							}
+						}
+					}
+				}
+			}
+			document.getElementById('username').innerText = username;
+		}
+		
+	</script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+		// Hide Header on on scroll down
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+			didScroll = true;
+		});
+
+		setInterval(function() {
+			if (didScroll) {
+				hasScrolled();
+				didScroll = false;
+			}
+		}, 250);
+
+		function hasScrolled() {
+			var st = $(this).scrollTop();
+			
+			// Make sure they scroll more than delta
+			if(Math.abs(lastScrollTop - st) <= delta)
+				return;
+			
+			// If they scrolled down and are past the navbar, add class .nav-up.
+			// This is necessary so you never see what is "behind" the navbar.
+			if (st > lastScrollTop && st > navbarHeight){
+				// Scroll Down
+				$('header').removeClass('nav-down').addClass('nav-up');
+			} else {
+				// Scroll Up
+				if(st + $(window).height()/2 < $(document).height()) {
+					$('header').removeClass('nav-up').addClass('nav-down');
+				}
+			}
+			
+			lastScrollTop = st;
+		}
+		
+		
+		function submitEventSearchFilter(event) {
+			event.preventDefault();
+		}
+		
+	</script>
+	
+</html>

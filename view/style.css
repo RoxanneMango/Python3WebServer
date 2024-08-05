@@ -1,0 +1,335 @@
+body {
+	background-color: white;
+	color: black;
+	height: 100%;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Rethink Sans", sans-serif;
+	font-size: 14px;
+	font-weight: medium;
+}
+
+@media only screen and (max-width: 300px) {
+	/* phone screen stuff */
+}
+
+header {
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+    transition: top 0.2s ease-in-out;
+	z-index: 1000;
+}
+
+footer {
+	width: 100%;
+	height: auto;
+	background-color: #888888; /* gray */
+}
+footer > p {
+	margin: auto;
+	color: white;
+	padding: 1em;
+}
+
+footer > ul > li > a > img {
+	height: 2em;
+	width: 2em;
+}
+footer > ul {
+	display: inline-flex;
+	padding: 0.5em;
+}
+footer > ul > li {
+	height: 2em;
+	width: auto;
+	padding: 0.2em;
+	display: inline-flex;
+}
+/*
+footer > ul > li > img:hover {
+	cursor: pointer;
+}
+*/
+footer > ul > li > p {
+	width: 8em;
+	word-break: word-all;
+	color: white;
+}
+
+.paddedImage {
+	width: auto;
+	height: 66%;
+}
+.image {
+	width: auto;
+	height: 100%;
+}
+
+.nav-up {
+    top: -7em;
+}
+
+.carouselArticle {
+	width: 20em;
+	height: auto;
+	min-height: 20em;
+	padding: 1em;
+	margin: 0 0 2em 2em;
+	border-radius: 4px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 1px -1px, rgba(0, 0, 0, 0.3) 0px 1px 1px 0px, rgba(0, 0, 0, 0.3) 0px 1px 3px 0px;
+	font-weight: 400;
+    line-height: 1.5;
+	background-color: white;
+}
+hr {
+	margin-top: 2em;
+	width: 80%;
+}
+.carouselArticle > h3 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 1em 0;
+}
+
+/* main content */
+#MainContent {
+	width: 100%;
+	height: 100%;
+	min-height: 500px;	
+}
+
+#MainContainer {
+	width: 100%;
+	height: 100%;
+	padding: 2em;
+	word-break: word-all;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	min-height:100vh;
+}
+
+#HomeContainer {
+	margin-top: 7em;
+	height: auto;
+}
+
+#StaticTopBanner {
+	height: 5em;
+}
+
+#HomeCollapsebleFilterBar {
+	height: 2em;
+	background-color: #888888; /* gray */
+}
+#HomeCarousel {
+	width: 100%;
+	background-color: #888888; /* gray */
+	background-image: linear-gradient(to left top, rgba(255,255,255,0.5),
+					  rgba(255,255,255,1) 70%), url("assets/indexBackground.png");
+	background-size: cover;
+	padding: 0 0 2em 0;
+}
+
+#EventFilterBar {
+	width: 100%;
+	height: auto;
+	background-color: #888888; /* gray */
+	color: white;
+}
+
+#EventFilterBar > ul > li {
+	width: auto;
+	margin: 1em 0 1em 1em;
+	text-decoration: underline;
+}
+
+#EventFilterBar > ul > li:hover {
+	font-weight: unset;
+}
+
+#EventFilterBar > ul > li > form > input {
+	width: 10em;
+	padding: 3px;
+	color: black;
+}
+
+button {
+	width: auto;
+	padding: 0 0.5em;
+	background-color: #EEEEEE;
+	border: 1px solid gray;
+	border-radius: 0.25em;
+}
+button:hover {
+	background-color: white;
+	cursor: pointer;
+}
+
+h1 {
+	font-family: Georgia;
+	font-size: 64px;
+	margin-bottom: 0.5em;
+	color: forestgreen;
+}
+
+h2 {
+	padding-bottom: 1em;
+	font-size: 24px;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+    line-height: 1.5;
+}
+/*
+.leftAndRightBlackFadeOverlay {
+	background: transparent;
+	width: 100%;
+	height: 100%;
+	content: '';
+	left: 0; right: 0;
+	top: 0; bottom: 0;
+	background-image:
+		linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0) 10%),
+		linear-gradient(to left , rgba(0,0,0,0.3), rgba(0,0,0,0) 10%);
+}
+*/
+a {
+	all: unset;
+	width: 100%;
+	height: 100%;
+}
+a:hover {
+	cursor: pointer;
+}
+
+.horizontalListNavbar {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	overflow: hidden;
+}
+.horizontalListNavbar > li {
+	width: 10em;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-right: 1px solid black;
+}
+.horizontalListNavbar > li > * {
+	width: auto;
+	height: auto;
+	display: flex;
+}
+
+.horizontalListNavbar > li:hover {
+	font-weight: bolder;
+}
+
+.horizontalList {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	display: inline-flex;
+}
+.horizontalList > li {
+	width: 20em;
+	height: auto;
+	display: inline-flex;
+}
+.horizontalList > li:hover {
+	font-weight: bolder;
+}
+.horizontalListBanner {
+	background-color: #cccccc; /* Cadet gray */
+}
+.horizontalListBanner > li:first-child, 
+.horizontalListBanner > li:last-child 	{ 
+	width: 10em;
+	height: auto;
+	border: 0;
+}
+.horizontalListBanner > li 	{ 
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	width: 100%; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bannerImage {
+	width: auto;
+	height: 100%;
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.horizontalListBanner > li:hover {
+	cursor: pointer;
+}
+
+.horizontalListCarousel {
+	width: auto;
+	height: auto;
+	padding: 2em;
+}
+.horizontalListCarousel > li {
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+
+.verticalList {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	gap: -1em;
+	grid-template-columns: 1fr 1fr;
+	overflow: hidden;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-top: 2px solid black;
+	background-color: darkgray;
+}
+@media only screen and (max-width: 500px) {
+	.verticalList {
+		grid-template-columns: 1fr;
+	}
+	h1 {
+		font-size: 48px;
+	}
+}
+
+.verticalList > li {
+	width: auto;
+	height: 20em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	background-color: white;
+	border: 0.5em solid darkgray;
+}
+.verticalList > li > * {
+	display: flex;
+}
+
+.verticalList > li > a > div {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}

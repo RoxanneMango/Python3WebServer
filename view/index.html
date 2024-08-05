@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<link href="style.css" rel="stylesheet" type="text/css">
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="includeHTML.js"></script>
+		
+		<title>Py3Server Home</title>
+		
+	</head>
+
+	<body>	
+		<div id="HomeContainer">
+
+			<div data-include="header"></div>
+
+			<div id="HomeCarousel">
+				<ul class="horizontalListCarousel">
+					<li>
+						<h1>Python3 Web Server</br>Home Page</h1>
+						<p>Hello world!</p>
+						<hr>
+					</li>
+				</ul>
+				<ul class="horizontalList" style="display:block;">
+					<li>
+						<article class="carouselArticle">
+							<h3>Card 1</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at imperdiet velit. 
+								Integer vitae malesuada metus. Sed pharetra dui non mauris lacinia, vel faucibus enim 
+								semper.
+							</p>
+						</article>
+					</li>
+					<li>
+						<article class="carouselArticle">
+							<h3>Card 2 with more text!</h3>
+							<p>
+								Curabitur blandit ornare lectus, id venenatis est tincidunt at. Nulla tempor vitae sapien 
+								et hendrerit. Nulla consequat purus risus, ac luctus eros semper sed. Praesent a facilisis 
+								turpis. Pellentesque sit amet turpis eget risus dictum faucibus. Sed mollis mi et lectus 
+								feugiat dictum. Vivamus ornare molestie augue non ornare. Curabitur pharetra dolor tellus, 
+								eu vehicula est fringilla at.
+							</p>
+						</article>								
+					</li>
+					<li>
+						<article class="carouselArticle">
+							<h3>Card 3</h3>
+							<p>
+								You can keep on adding them!
+							</p>
+						</article>
+					</li>					
+				</ul>
+			</div>
+			
+			<div id="EventFilterBar">
+				<ul class="horizontalList">
+					<li>
+						<p>Search</p>
+					</li>
+					<li>
+						<form onSubmit=submitEventSearchFilter;>
+							<input type="text"/>
+						</form>
+					</li>
+					<li>
+						<button>Filter</button>
+					</li>
+				</ul>
+			</div>
+			<div id="HomeMainContentStream">
+				<ul class="verticalList">								
+					<li style="background-image: linear-gradient(to left, rgba(255,255,255,0.7),
+					  rgba(255,255,255,0.7) 100%), url(''); background-size: cover;">
+						<a>
+							<div>
+								<h2>Clickable box</h2>
+							</div>
+						</a>
+					</li>
+					<li style="background-image: linear-gradient(to left, rgba(255,255,255,0.7),
+					  rgba(255,255,255,0.7) 100%), url(''); background-size: cover;">
+						<a>
+							<div>
+								<h2>Clickable box</h2>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+	<div data-include="footer"></div>
+
+</html>

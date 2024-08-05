@@ -1,0 +1,36 @@
+#userPanelTabList {
+	background-color: #e3e3e3;
+	width: 15em;
+	height: 100%;
+	float: left;
+	margin: 0;
+}
+
+#userPanelTabList > h3 {
+	font-size: 18px;
+	margin: 0.5em;
+	padding: 0;
+}
+
+.userPanelVerticalList {
+	background-color: #e3e3e3;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.userPanelVerticalList > a {
+	width: 100%;
+	height: 100%;
+}
+
+.userPanelVerticalList > a > li {
+	margin: 0;
+	padding: 1em;
+	border-bottom: 1px solid black;
+	padding: 1em;
+}
+
+.userPanelVerticalList > a > li:first-child {
+	border-top: 1px solid black;
+}
